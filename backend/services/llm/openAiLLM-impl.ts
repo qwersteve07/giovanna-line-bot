@@ -43,7 +43,7 @@ class OpenAiLLMImpl implements LLM {
             body: JSON.stringify(requestBody),
             headers: {
                 "content-type": "application/json",
-                Authorization: `Bearer ${API_KEY}`,
+                Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
             },
         };
 
