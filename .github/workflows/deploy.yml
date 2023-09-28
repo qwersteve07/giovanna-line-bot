@@ -20,6 +20,8 @@ jobs:
           node-version: "16.x"
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
       - name: execute remote ssh commands
         uses: appleboy/ssh-action@v1.0.0
         with:
