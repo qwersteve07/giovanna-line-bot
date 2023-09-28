@@ -24,5 +24,6 @@ jobs:
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SSH_HOST }}
+          key: ${{secrets.SSH_KEY}}
           username: ${{ secrets.SSH_USERNAME }}
           script: rsync -avhzr linebot/* ./linebot && rsync -avhzr dist/* /server
