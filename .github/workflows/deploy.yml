@@ -23,4 +23,4 @@ jobs:
       - name: Build
         run: yarn build
       - name: copy to remote
-        run: rsync -avhzr linebot/* ./linebot && rsync -avhzr dist/* /server
+        run: rsync -avhzr linebot/* ./linebot
