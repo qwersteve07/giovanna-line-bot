@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "tsc && webpack && rm -rf ./temp",
-    "postbuild": "mkdir -p dist/linebot && cp ./linebot/replies.yml ./dist/linebot && mkdir -p dist/backend/data && cp ./backend/data/* ./dist/backend/data"
+    "build": "tsc",
+    "postbuild": "mkdir -p dist/data && cp ./backend/data/* ./dist/data"
   },
   "dependencies": {
     "@koa/cors": "^4.0.0",
@@ -21,8 +21,6 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "typescript": "^5.2.2"
   }
 }

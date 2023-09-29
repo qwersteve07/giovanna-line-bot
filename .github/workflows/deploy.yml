@@ -30,5 +30,5 @@ jobs:
           chmod 700 ~/.ssh
           ssh-keyscan ${{secrets.SSH_HOST}} >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
-          rsync -avhzr dist/linebot/* ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:/root/linebot
-          rsync -avhzr dist/backend/* ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:/root/backend
+          rsync -avhzr linebot/* ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:/root/linebot
+          rsync -avhzr dist/* ${{secrets.SSH_USERNAME}}@${{secrets.SSH_HOST}}:/root/backend
